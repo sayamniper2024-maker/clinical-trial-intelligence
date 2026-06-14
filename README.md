@@ -80,3 +80,19 @@ Built as a portfolio project demonstrating:
 - Data pipeline engineering
 - AI agent development
 - Interactive dashboard design
+
+- live_url = ""
+
+with open("README.md", "r") as f:
+    readme = f.read()
+
+readme = readme.replace(
+    "https://your-app-url.streamlit.app",
+    live_url
+)
+
+with open("README.md", "w") as f:
+    f.write(readme)
+
+print(f"✅ README updated with: {live_url}")
+print("Upload the new README.md to GitHub to update it.")
